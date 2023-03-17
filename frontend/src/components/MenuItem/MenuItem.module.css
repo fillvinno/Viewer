@@ -1,0 +1,25 @@
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 14px;
+    color: var(--black2);
+    padding: 8px 24px;
+    transition: .1s;
+    text-decoration: none;
+}
+.menuItem span {
+    font-size: 24px;
+}
+
+.menuItem:hover {
+    background-color: var(--purple5);
+    color: var(--purple1);
+    transition: .1s;
+    cursor: pointer;
+}
+
+.menuItem p {
+    padding: 0;
+    margin: 0;
+}

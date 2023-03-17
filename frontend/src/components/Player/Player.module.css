@@ -1,0 +1,238 @@
+.player {
+    width: 800px;
+    height: 470px;
+    border-radius: 20px;
+    background-color: #000;
+}
+.fullscreenPlayer {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+}
+
+.videoWrap {
+    position: relative;
+}
+
+
+.controlsContainer {
+    box-sizing: border-box;
+    width: 800px;
+    height: 470px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    margin-top: -470px;
+    border-radius: 20px;
+}
+.fullscreenControlsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.controlsIcon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 40;
+}
+
+.controlsIconPlay {
+    width: 40px;
+    height: 40px;
+    margin-left: 10em;
+    margin-right: 10em;
+    z-index: 30;
+    cursor: pointer;
+}
+.fullscreenControlsIconPlay {
+    width: 40px;
+    height: 40px;
+    margin-left: 300%;
+    margin-right: 300%;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.hideControls {
+    opacity: 0;
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    visibility: hidden;
+}
+
+/* ползунки с временем */
+
+.timeControls {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    padding-bottom: 24px;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(transparent, #000);
+}
+.fullscreenTimeControls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #000);
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.controlsTime {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.controlsTime p {
+    padding: 0;
+    margin: 0;
+}
+
+.timeProgressBar {
+    -webkit-appearance: none;
+    width: 740px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(var(--purple1), var(--purple1));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 18px;
+    outline: none;
+    cursor: pointer;
+}
+.fullscreenTimeProgressBar {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+    background-image: linear-gradient(var(--purple1), var(--purple1));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 18px;
+    outline: none;
+    cursor: pointer;
+}
+  
+.timeProgressBar::-webkit-slider-thumb, .fullscreenTimeProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #8d32dd;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+  
+.timeProgressBar::-webkit-slider-runnable-track, .fullscreenTimeProgressBar::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.volumeBar {
+    -webkit-appearance: none;
+    width: 70px;
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(var(--purple1), var(--purple1));
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+}
+.volumeBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #8d32dd;
+    box-shadow: 0 0 2px 0 #555;
+    transition: background .3s ease-in-out;
+}
+
+
+/* Управляющие кнопки */
+
+.smallIcon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.timeBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 720px;
+}
+.fullscreenTimeBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+}
+
+.leftSideBtns {
+    display: flex;
+    gap: 24px;
+}
+
+.rightSideBtns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.volume {
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selectSpeed {
+   position: absolute;
+   bottom: 120px;
+   right: 60px;
+   padding: .6em;
+}
+
+.pageWrap {
+    display: flex;
+    gap: 20px;
+}
+
+.upsidePlayer {
+    display: flex;
+    flex-direction: column;
+}

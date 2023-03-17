@@ -1,0 +1,99 @@
+.wrap {
+    margin-top: 12px;
+}
+.title {
+    color: var(--black1);
+    font-size: 22px;
+    line-height: 42px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.info {
+    color: var(--black3);
+    font-size: 16px;
+    margin-top: 4px;
+}
+.timeAgo::before {
+    content: "\2022";
+    font-size: 16px;
+    padding: 0 8px;
+}
+
+.videoBtns {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSideBtns {
+    display: flex;
+    align-items: center;
+}
+.rightSideBtns {
+    display: flex;
+    align-items: center;
+}
+
+.channelPhoto {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.channelName {
+    color: var(--black1);
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 22px;
+}
+.followBtn {
+    text-transform: uppercase;
+    background-color: var(--purple5);
+    color: var(--purple1);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.followBtn:hover {
+    background-color: #e3dcea;
+    transition: .3s;
+}
+
+
+.rightSideBtns button span {
+    font-size: 28px;
+}
+.likeBtnMount {
+    font-size: 20px;
+}
+
+.btns {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.btns:hover {
+    transition: .1s;
+    color: var(--purple1);
+}
+
+.underline {
+    padding: 0;
+    margin: 16px 0;
+    height: 1px;
+    border: none;
+    border-top: 1px solid var(--black4);
+}
+
+.description {
+    white-space: no-wrap;
+}

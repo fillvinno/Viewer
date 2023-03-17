@@ -1,0 +1,22 @@
+.layout{
+    display: flex;
+    height: 100%;
+}
+
+.contentWrapper {
+    width: 100%;
+    padding-left: 21px;
+    padding-right: 28px;
+    margin-left: 236px;
+}
+
+.trending .videoCards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.recommendations .videoCards{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content {
+    margin-top: 90px;
+}

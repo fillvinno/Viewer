@@ -1,0 +1,26 @@
+.addVideoBtn {
+    background-color: var(--purple1);
+    width: 160px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    gap: 8px;
+    transition: .2s;
+}
+.addVideoBtn:hover {
+    background-color: #8c33da;
+    transition: .2s;
+}
+
+.text {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}

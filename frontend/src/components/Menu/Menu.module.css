@@ -1,0 +1,7 @@
+.title {
+    margin: 32px 0 10px 26px;
+    margin-left: 26px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--grey1);
+}

@@ -1,0 +1,37 @@
+.notification {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F4FC;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+}
+.notification:hover {
+    transition: .2s;
+    background-color: #e7e3eb;
+}
+.notification:hover .notificatonsCounter {
+    transition: .2s;
+    background-color: #d95e00;
+}
+
+.notificatonsCounter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #FF6D00;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    color: #fff;
+    font-size: 11px;
+    user-select: none;
+    transition: .2s;
+}

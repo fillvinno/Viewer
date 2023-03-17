@@ -1,0 +1,18 @@
+.heading {
+    border-left: 4px solid var(--purple1);
+    padding-left: 16px;
+    text-transform: uppercase;
+    margin: 8px 0 16px 0;
+}
+
+
+.videoCardsRecommendations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 24px;
+}
+.videoCardsTrending {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+}
