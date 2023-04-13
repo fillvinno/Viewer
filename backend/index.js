@@ -1,40 +1,24 @@
-require('dotenv').config()
-const express = require('express')
-const cors = require('cors')
-const cookieParser = require('cookie-parser')
-// подключение к бд
-const Sequelize = require("sequelize");
+import dotenv from 'dotenv'
+import cors from 'cors'
+import cookieParser from 'cookie-parser'
+import router from './router/index.js'
+import sequelize from 'sequelize'
+import connectDB from './db.js'
+import express from 'express'
 
-const sequelize = new Sequelize("viewer", "postgres", "root", {
-  dialect: "postgres",
-  host: "localhost",
-  define: {
-    timestamps: false
-  }
-});
+dotenv.config()
 
-sequelize.sync().then(()=>{
-    app.listen(PORT, function(){
-      console.log('server started on port ' + PORT);
-    });
-  }).catch(err=>console.log(err));
+connectDB()
 
 const PORT = process.env.PORT || 5000
-
 const app = express()
+
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors())
+app.use('/api', router)
 
 app.use(cors({
         credentials: true,
         origin: 'http://localhost:3000'
     }))
-app.use(cookieParser())
-
-// const start = async () => {
-//     try {
-//         app.listen(PORT, () => console.log('server started on port ' + PORT))
-//     } catch (e) {
-//         console.log(e);
-//     }
-// }
-
-// start()
