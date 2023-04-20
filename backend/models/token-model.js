@@ -1,13 +1,6 @@
 import { Sequelize, DataTypes, Model } from "sequelize"
-import connectDB from "../db.js"
-import dotenv from 'dotenv'
-import User from './user-model.js'
 
-dotenv.config()
-
-const sequelize = new Sequelize(process.env.DB_URL)
-
-connectDB()
+const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
 class Token extends Model {}
 

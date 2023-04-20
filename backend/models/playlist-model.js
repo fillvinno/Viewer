@@ -1,12 +1,6 @@
 import { Sequelize, DataTypes, Model } from "sequelize"
-import connectDB from "../db.js"
-import dotenv from 'dotenv'
 
-dotenv.config()
-
-const sequelize = new Sequelize(process.env.DB_URL)
-
-connectDB()
+const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
 class Playlist extends Model {}
 

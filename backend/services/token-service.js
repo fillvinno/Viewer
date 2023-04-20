@@ -1,14 +1,8 @@
 import jwt from "jsonwebtoken"
 import Sequelize from "sequelize"
 import { Token } from '../models/associations.js'
-import connectDB from "../db.js"
-import dotenv from 'dotenv'
 
-dotenv.config()
-
-const sequelize = new Sequelize(process.env.DB_URL)
-
-connectDB()
+const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
 class TokenService {
     generateTokens(payload) {

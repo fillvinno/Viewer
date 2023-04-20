@@ -1,13 +1,6 @@
 import { Sequelize, DataTypes, Model, BelongsTo } from "sequelize"
-import connectDB from "../db.js"
-import dotenv from 'dotenv'
-import Token from './token-model.js'
 
-dotenv.config()
-
-const sequelize = new Sequelize(process.env.DB_URL)
-
-connectDB()
+const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
 class User extends Model {}
 
@@ -32,9 +25,10 @@ User.init({
   },
   isActivated: {
     type: DataTypes.BOOLEAN,
-    allowNull: false
+    defaultValue: false,
+    allowNull: true
   },
-  activation_link: {
+  activationLink: {
     type: DataTypes.STRING,
     allowNull: true
   }

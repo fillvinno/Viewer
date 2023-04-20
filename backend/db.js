@@ -1,5 +1,4 @@
 import { Sequelize } from "sequelize"
-import dotenv from 'dotenv'
 import colors from 'colors'
 
 const connectDB = async () => {
