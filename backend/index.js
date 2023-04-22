@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser'
 import router from './router/index.js'
 import connectDB from './db.js'
 import express from 'express'
+import errorMiddleware from './middlewares/error-middleware.js'
 
 dotenv.config()
 
@@ -16,6 +17,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
 app.use('/api', router)
+app.use(errorMiddleware)
 
 app.use(cors({
         credentials: true,
