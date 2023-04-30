@@ -1,11 +1,13 @@
 class UserDto {
-    email
     id
+    email
+    nickname
     isActivated
 
     constructor(model) {
-        this.email = model?.email
         this.id = model?.id
+        this.email = model?.email
+        this.nickname = model?.nickname
         this.isActivated = model?.isActivated
     }
 }

@@ -13,7 +13,7 @@ const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 uuidv4()
 
 class UserService {
-    async registration(email, password, nickname) {
+    async registration(email, nickname, password) {
         const candidate = await User.findOne({ where: { email } })
         if (candidate) {
             throw ApiError.BadRequest(`Пользователь с почтовым адресом ${email} уже существует`)
@@ -21,7 +21,7 @@ class UserService {
         const hashPassword = await bcrypt.hash(password, 3)
         const activationLink = uuidv4()
 
-        let user = await User.create({ email, password: hashPassword, activationLink, nickname})
+        let user = await User.create({ email, nickname, password: hashPassword, activationLink })
         user = user.dataValues
         await MailService.sendActivationMail(email, `${process.env.API_URL}/api/activate/${activationLink}`)
 

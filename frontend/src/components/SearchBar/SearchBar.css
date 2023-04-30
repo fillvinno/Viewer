@@ -2,11 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--grey2);
+    border: none;
+    outline: 1px solid var(--grey2);
     width: 450px;
     border-radius: 8px;
     padding: 0;
     box-sizing: border-box;
+}
+.search-bar:hover {
+    outline: 1px solid var(--purple1);
 }
 
 .search-bar__txt {
@@ -16,6 +20,7 @@
     width: 100%;
     padding: 9px 0;
 }
+
 .search-bar__btn {
     display: flex;
     align-items: center;
