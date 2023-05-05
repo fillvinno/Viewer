@@ -7,11 +7,15 @@
     background-color: #fff;
     position: fixed;
     z-index: 1000;
-    padding-right: 20px;
+    margin-left: 236px;
+    padding-left: 21px;
+    padding-right: 28px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .headerBtns {
     display: flex;
+    align-items: center;
     gap: 35px;
     padding-right: 285px;
     z-index: 1001;

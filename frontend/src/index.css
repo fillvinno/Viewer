@@ -1,5 +1,8 @@
 :root {
     --purple1: #7B2CBF;
+    --purple2: #9556CC;
+    --purple3: #B68BDC;
+    --purple4: #E5D5F2;
     --purple5: #F2EAF9;
     --black1: #110F15;
     --black2: #413F44;
@@ -7,8 +10,12 @@
     --black4: #CFCFD0;
     --grey1: #BFBDC1;
     --grey2: #D6D6D8;
+    --red: #CB1F34;
 }
-
+::selection {
+  background: var(--purple1);
+  color: #fff;
+}
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?reas6z');

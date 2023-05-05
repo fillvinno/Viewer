@@ -1,0 +1,51 @@
+.channelInfoWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    margin-bottom: 16px;
+}
+
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatarWrapper {
+    margin-right: 24px;
+}
+.channelInfo {
+    font-size: 14px;
+    color: var(--black3);
+}
+.channelInfo span {
+    margin-right: 8px;
+}
+
+.nickname {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.channelNavigation {
+    display: flex;
+}
+
+.navigationList {
+    list-style: none;
+    display: flex;
+}
+
+.navigationItems {
+    margin-right: 16px;
+    border-bottom: 3px solid transparent;
+}
+.navigationItems a:hover {
+    border-bottom: 3px solid var(--black3);
+}
+.navigationItems a{
+    text-decoration: none;
+    color: var(--black2);
+    padding: 8px 0;
+}

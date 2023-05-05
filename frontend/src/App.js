@@ -9,6 +9,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import AuthService from './services/AuthService';
 import { setAuth, setUser } from './store/slices/authSlice';
+import Channel from './pages/Channel/Channel';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
         <Route path='/trending' element={<h1>trending</h1>}/>
         <Route path='/registration' element={<Registration/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/channel' element={<Channel/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -8,8 +8,8 @@ function Layout({children}) {
   return (
     <div className={styles.layout}>
         <Sidebar/>
+        <Header/>
         <div className={styles.contentWrapper}>
-          <Header/>
           <div className={styles.content}>
             {children}
           </div>

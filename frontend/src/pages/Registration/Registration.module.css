@@ -13,7 +13,7 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    /* gap: 18px; */
     /* border: 2px solid var(--purple1); */
     box-shadow: 30px 30px 30px 30px rgba(123, 44, 191, 0.5);
     -webkit-box-shadow: 30px 30px 30px 30px rgba(123, 44, 191, 0.5);
@@ -32,6 +32,7 @@
     border: none;
     outline: 1px solid var(--grey2);
     box-sizing: border-box;
+    margin-bottom: 18px;
 }
 ::placeholder {
     color: var(--grey1);
@@ -45,6 +46,7 @@
 
 .button {
     width: 400px;
+    margin-bottom: 18px;
     box-sizing: border-box;
     padding: 16px 20px;
     border-radius: 8px;
@@ -73,7 +75,7 @@
 .logo {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 60px;
     align-items: center;
     gap: 10px;
     color: #7B2CBF;
@@ -82,4 +84,10 @@
     font-size: 36px;
     user-select: none;
     text-decoration: none;
+}
+
+.errors {
+    color: var(--red);
+    font-size: 14px;
+    margin-bottom: 8px;
 }
