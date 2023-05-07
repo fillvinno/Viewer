@@ -1,0 +1,140 @@
+.wrap {
+    display: flex;
+    gap: 32px;
+}
+
+.firstVideoSection {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.firstVideoSectionWrap {
+    width: 350px;
+}
+
+.previewWrap {
+    position: relative;
+}
+
+.firstVideoLink {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.firstVideoLink:hover .previewOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: .2s;
+}
+
+.previewOverlay {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0 0 3px 0;
+    color: #fff;
+    opacity: 0;
+    transition: .2s;
+    border-radius: 15px;
+}
+
+.preview {
+    width: 350px;
+    border-radius: 15px;
+}
+
+.firstVideoHeading {
+    font-size: 28px;
+    color: var(--black1);
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 18px;
+}
+
+.channelName {
+    text-decoration: none;
+    color: var(--black1);
+    font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+}
+
+.videoCount {
+    color: var(--black3);
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.description {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.playlistBtns{
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.playlistBtn {
+    padding: 12px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: var(--grey3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .1s;
+    cursor: pointer;
+}
+.playlistBtn:hover {
+    background-color: var(--grey4);
+    transition: .1s;
+}
+
+.playlistBtns span{
+    color: var(--purple1);
+    font-size: 24px;
+}
+
+.shareIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.playBtn {
+    border: none;
+    text-decoration: none;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 32px;
+    background-color: var(--purple1);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: .1s;
+    cursor: pointer;
+}
+.playBtn:hover {
+    transition: .1s;
+    background-color: var(--purple2);
+}
+
+.videoList {   
+    width: 100%;
+}

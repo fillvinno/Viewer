@@ -8,8 +8,12 @@ import Login from './pages/Login/Login'
 import { BrowserRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import AuthService from './services/AuthService';
-import { setAuth, setUser } from './store/slices/authSlice';
-import Channel from './pages/Channel/Channel';
+import { setAuth, setUser } from './store/slices/authSlice'
+import ChannelFeatured from './pages/Channel/ChannelFeatured/ChannelFeatured'
+import ChannelPlaylists from './pages/Channel/ChannelPlaylists/ChannelPlaylists'
+import ChannelChannels from './pages/Channel/ChannelChannels/ChannelChannels'
+import ChannelAbout from './pages/Channel/ChannelAbout/ChannelAbout'
+import Playlist from './pages/Playlist/Playlist';
 
 function App() {
 
@@ -44,7 +48,12 @@ function App() {
         <Route path='/trending' element={<h1>trending</h1>}/>
         <Route path='/registration' element={<Registration/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/channel' element={<Channel/>}/>
+        <Route path='/channel' element={<ChannelFeatured/>}/>
+        <Route path='/channel/featured' element={<ChannelFeatured/>}/>
+        <Route path='/channel/playlists' element={<ChannelPlaylists/>}/>
+        <Route path='/channel/channels' element={<ChannelChannels/>}/>
+        <Route path='/channel/about' element={<ChannelAbout/>}/>
+        <Route path='/playlist' element={<Playlist/>}/>
       </Routes>
     </BrowserRouter>
   );

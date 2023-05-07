@@ -6,7 +6,7 @@ export default function VideoCards({title, videos}) {
   return (
     <div className={styles.wrap}>
         <h2 className={styles.heading}>{title}</h2>
-        <div className={title === 'For you' ? styles.videoCardsRecommendations : title === 'Trending' ? styles.videoCardsTrending : styles.videoCardsRelated}>
+        <div className={title === 'For you' ? styles.videoCardsRecommendations : title === 'Trending' ? styles.videoCardsTrending : title === 'Featured' ? styles.channelFeatured : styles.videoCardsRelated}>
             <VideoCard/>
             <VideoCard/>
             <VideoCard/>

@@ -1,0 +1,22 @@
+.wrap {
+    padding: 0 100px;
+}
+
+.heading {
+    border-left: 4px solid var(--purple1);
+    padding-left: 16px;
+    text-transform: uppercase;
+    margin: 16px 0;
+}
+
+.infoWrap {
+    display: flex;
+}
+
+.statisticsWrap {
+    width: 100%;
+}
+
+.statisticsItem {
+    border-bottom: 1px solid var(--black3);
+}

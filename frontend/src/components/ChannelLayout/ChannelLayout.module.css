@@ -30,11 +30,13 @@
 
 .channelNavigation {
     display: flex;
+    padding: 0 100px;
 }
 
 .navigationList {
     list-style: none;
     display: flex;
+    padding: 0;
 }
 
 .navigationItems {
@@ -48,4 +50,12 @@
     text-decoration: none;
     color: var(--black2);
     padding: 8px 0;
+}
+
+
+.linkDefault:hover {
+    border-bottom: 3px solid var(--black3);
+}
+.activeLink {
+    border-bottom: 3px solid var(--black1);
 }

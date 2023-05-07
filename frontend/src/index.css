@@ -10,6 +10,9 @@
     --black4: #CFCFD0;
     --grey1: #BFBDC1;
     --grey2: #D6D6D8;
+    --grey3: #E8E7E9;
+    --grey4: #D6D6D8;
+    --grey5: #E8E7E9;
     --red: #CB1F34;
 }
 ::selection {
@@ -103,4 +106,8 @@ body, #root, html{
     font-family: 'Inter', sans-serif;
     height: 100%;
     width: 100%;
+}
+
+html {
+  overflow-y: scroll;
 }

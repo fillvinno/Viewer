@@ -4,7 +4,7 @@ import styles from './VideoCard.module.css'
 import preview from '../../img/preview.png'
 import channelAvatar from '../../img/channelAvatar.png'
 
-export default function VideoCard({ related }) {
+export default function VideoCard() {
   return (
     <div className={styles.videoCardWrap}>
       <Link to='/player'>

@@ -1,0 +1,52 @@
+.channelWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.channelWrap a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.avatarWrap {
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.channelName {
+    color: var(--black1);
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.subscribersCount {
+    color: var(--black3);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 12px;
+}
+
+.subscribeBtn {
+    border: none;
+    padding: 10px;
+    border-radius: 24px;
+    font-size: 12px;
+    background-color: var(--purple1);
+    color: #fff;
+    transition: .1s;
+    cursor: pointer;
+}
+.subscribeBtn:hover {
+    background-color: var(--purple2);
+    transition: .1s;
+}

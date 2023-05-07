@@ -1,0 +1,10 @@
+.channelsWrap {
+    padding: 0 100px;
+}
+
+.heading {
+    border-left: 4px solid var(--purple1);
+    padding-left: 16px;
+    text-transform: uppercase;
+    margin: 16px 0;
+}
