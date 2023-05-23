@@ -6,7 +6,7 @@ let iconStyles = { color: "#fff", fontSize: "24px" };
 
 export default function AddVideoBtn() {
   return (
-    <Link to='/' className={styles.addVideoBtn}>
+    <Link to='/create' className={styles.addVideoBtn}>
         <span className='icon-addVideoBtn' style={iconStyles}/>
         <span className={styles.text}>Add video</span>
     </Link>

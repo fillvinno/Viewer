@@ -14,6 +14,7 @@ import ChannelPlaylists from './pages/Channel/ChannelPlaylists/ChannelPlaylists'
 import ChannelChannels from './pages/Channel/ChannelChannels/ChannelChannels'
 import ChannelAbout from './pages/Channel/ChannelAbout/ChannelAbout'
 import Playlist from './pages/Playlist/Playlist';
+import CreateVideo from './pages/CreateVideo/CreateVideo';
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
         <Route path='/channel/channels' element={<ChannelChannels/>}/>
         <Route path='/channel/about' element={<ChannelAbout/>}/>
         <Route path='/playlist' element={<Playlist/>}/>
+        <Route path='/create' element={<CreateVideo/>}/>
       </Routes>
     </BrowserRouter>
   );

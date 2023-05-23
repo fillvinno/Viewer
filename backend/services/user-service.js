@@ -5,8 +5,8 @@ import TokenService from './token-service.js'
 import UserDto from '../dtos/user-dto.js'
 import { Sequelize } from 'sequelize'
 import { User } from '../models/associations.js'
-import ApiError from '../exceptions/api-error.js'
 import tokenService from './token-service.js'
+import ApiError from '../exceptions/api-error.js'
 
 const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 

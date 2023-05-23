@@ -44,14 +44,14 @@ export default function Login() {
       
             if(response.data) {
               localStorage.setItem('token', response.data.accessToken)
-              dispatch(setUser(response.data))
               dispatch(setAuth(true))
+              dispatch(setUser(response.data.user))
               // редирект в приложение
               navigate('/home')
             }
           } catch (e) {
-            console.log(e.response?.data?.message)
-            setServerError(`${e.response?.data?.message}`)
+            console.log(e?.response?.data?.message)
+            setServerError(`${e?.response?.data?.message}`)
           }
         }
       }
@@ -84,7 +84,7 @@ export default function Login() {
             onBlur={handleBlur}
             value={values.password}
           />
-          { serverError ? (<div className={styles.errors}>Неправельные почта и пароль</div>) : null }
+          { serverError ? (<div className={styles.errors}>{serverError}</div>) : null }
           <button className={styles.button} type='submit'>Войти</button>
           <Link className={styles.registration} to='/registration'>Создать аккаунт</Link>
         </Form>

@@ -14,7 +14,7 @@ export default function ChannelLayout({children}) {
                     <img src={avatar} alt="avatar" />
                 </div>
                 <div className={styles.innerSectionWrapper}>
-                    <div className={styles.nickname}>Narihamo</div>
+                    <div className={styles.nickname}>Lorem</div>
                     <div className={styles.channelInfo}>
                         <span className={styles.subsribersCount}>99999 подписчиков</span>
                         <span className={styles.videosCount}>Нет видео</span>

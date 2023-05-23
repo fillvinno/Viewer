@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Registration.module.css'
 import logo from '../../img/logo.svg'
 import { Link, useNavigate } from 'react-router-dom'
@@ -6,8 +6,6 @@ import AuthService from '../../services/AuthService'
 import { setUser, setAuth } from '../../store/slices/authSlice' 
 import { useDispatch } from 'react-redux'
 import { Formik, Form, Field } from 'formik'
-
-const serverErrors = {}
 
 const validate = values => {
   const errors = {}
@@ -43,6 +41,8 @@ export default function Registration() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  const [serverError, setServerError] = useState('')
+
   return (
     <div className={styles.wrap}>
       <Formik
@@ -60,13 +60,14 @@ export default function Registration() {
       
             if (response.data) {
               localStorage.setItem('token', response.data.accessToken)
-              dispatch(setUser(response.data))
               dispatch(setAuth(true))
+              dispatch(setUser(response.data.user))
               // редирект в приложение
               navigate('/home')
             }
           } catch (e) {
-            serverErrors.regReq = e
+            console.log(e?.response?.data?.message)
+            setServerError(`${e?.response?.data?.message}`)
           }
         }
       }
@@ -125,7 +126,7 @@ export default function Registration() {
               onBlur={handleBlur} 
               value={values.confirmPassword}
             />
-            {serverErrors.regReq ? <div className={styles.errors}>{serverErrors.regReq}</div> : null}
+            { serverError ? (<div className={styles.errors}>{serverError}</div>) : null }
             <button className={styles.button} type='submit'>Зарегестрироваться</button>
             <Link className={styles.login} to='/login'>Уже есть аккаунт?</Link>
           </Form>

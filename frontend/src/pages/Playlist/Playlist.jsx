@@ -24,8 +24,8 @@ export default function Playlist() {
                         </div>
                     </Link>
                     <div className={styles.playlistInfoWrap}>
-                        <p className={styles.firstVideoHeading}>Фляма снова пикает мид и умирает</p>
-                        <Link to='/channel' className={styles.channelName}>Narihamo</Link>
+                        <p className={styles.firstVideoHeading}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum a vitae incidunt reprehenderit laboriosam! Sit optio quaerat dicta reprehenderit, est, officia cum dolorem eos nam esse repellat cumque saepe voluptatem.</p>
+                        <Link to='/channel' className={styles.channelName}>Lorem</Link>
                         <p className={styles.videoCount}>23 видео</p>
                         <Link to='/video:1' className={styles.playBtn}>
                             <img src={playIcon} alt='play' className={styles.playIcon} />

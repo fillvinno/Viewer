@@ -10,7 +10,7 @@ export default function ChannelsListItem() {
             <div className={styles.avatarWrap}>
                 <img src={avatar} alt="avatar" className={styles.avatar}/>
             </div>
-            <p className={styles.channelName}>Narihamo</p>
+            <p className={styles.channelName}>Lorem</p>
             <p className={styles.subscribersCount}>99999 подписчиков</p>
         </Link>
         <button className={styles.subscribeBtn}>Подписаться</button>

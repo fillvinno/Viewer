@@ -11,7 +11,7 @@ export default function PlaylistVideocardsItem() {
         <div className={styles.infoWrap}>
           <p className={styles.videoName}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod dolor cumque voluptatum maxime tenetur fugiat </p>
           <p className={styles.videoInfo}>
-            <Link to='/channel' className={styles.channelName}>narihamo</Link>
+            <Link to='/channel' className={styles.channelName}>lorem</Link>
             <span className={styles.videoDate}>1 год назад</span>
             <span className={styles.videoViews}>99 тыс. просмотров</span>
           </p>

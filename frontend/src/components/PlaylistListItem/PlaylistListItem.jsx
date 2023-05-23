@@ -15,7 +15,7 @@ export default function PlaylistListItem() {
           </div>
           <div className={styles.playlistOverlay}></div>
         </div>
-        <p className={styles.playlistName}>Фляма пикает мид и опять его убивают</p>
+        <p className={styles.playlistName}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </Link>
     </div>
   )
