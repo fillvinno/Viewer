@@ -29,6 +29,15 @@ Video.init({
     },
     likes: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
+        allowNull: false
+    },
+    videoPath: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    previewPath: {
+        type: DataTypes.STRING,
         allowNull: false
     },
     channelId: {

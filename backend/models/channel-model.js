@@ -25,19 +25,23 @@ Channel.init({
     },
     description: {
         type: DataTypes.STRING,
-        allowNull: false
+        defaultValue: '',
+        allowNull: true
     },
     views: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        defaultValue: 0,
+        allowNull: true
     },
     followers: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        defaultValue: 0,
+        allowNull: true
     },
     followings: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        defaultValue: 0,
+        allowNull: true
     },
     userId: {
         type: DataTypes.INTEGER,

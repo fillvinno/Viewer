@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import arrow from '../../img/menuArrow.svg'
 import User from '../../components/User/User'
 import { Formik, Form, Field } from 'formik'
-
+import VideoService from '../../services/VideoService'
 
 const validate = values => {
   const errors = {}
@@ -26,34 +26,28 @@ const validate = values => {
 }
 
 export default function CreateVideo() {
-  
-  const [videoFileName, setVideoFileName] = useState()
-  const [previewFileName, setPreviewFileName] = useState()
+
+  const [videoName, setVideoName] = useState('')
+  const [previewName, setPreviewName] = useState('')
+
+  const [videoFile, setVideoFile] = useState()
+  const [previewFile, setPreviewFile] = useState()
+
+  const formData = new FormData()
 
   const handleVideofileChange = (e) => {
     const file = e.target.files[0]
-    console.log(file.name);
-    const reader = new FileReader()
-    reader.readAsText(file)
-    reader.onload = () => {
-      setVideoFileName(file.name)
-    }
-    reader.onerror = () => {
-      console.log('file error', reader.error);
-    }
+    // formData.append('video', file)
+    setVideoFile(file)
+    console.log(videoFile)
+    setVideoName(file.name)
   }
   
   const handlePreviewChange = (e) => {
     const file = e.target.files[0]
-    console.log(file.name);
-    const reader = new FileReader()
-    reader.readAsText(file)
-    reader.onload = () => {
-      setPreviewFileName(file.name)
-    }
-    reader.onerror = () => {
-      console.log('file error', reader.error);
-    }
+    // formData.append('preview', file)
+    setPreviewFile(file)
+    setPreviewName(file.name)
   }
 
   return (
@@ -78,10 +72,25 @@ export default function CreateVideo() {
               preview: ''
             }}
             validate = { validate }
-            onSubmit = { () => console.log('test') }
+            onSubmit = { async (values) => {
+                try {
+                  formData.delete('title')
+                  formData.delete('description')
+                  
+                  formData.append('title', values.title)
+                  formData.append('description', values.description)
+                  formData.append('video', videoFile)
+                  formData.append('preview', previewFile)
+
+                  const response = VideoService.createVideo(formData)
+                } catch (e) {
+                  console.log(e?.response?.data?.message)
+                }  
+              } 
+            }
           >
             {({ values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
-              <Form onSubmit={handleSubmit}>
+              <Form onSubmit={handleSubmit} encType='multipart/form-data'>
                 <div className={styles.formWrap}>
                   <div className={styles.leftSideContent}>
                     <h2>Информация:</h2>
@@ -113,23 +122,22 @@ export default function CreateVideo() {
                     <p className={styles.fileinputHeading}>Выберите видео:</p>
                     { touched.video && errors.video ? (<div className={styles.errors}>{errors.video}</div>) : null }
                     <label className={styles.inputFile}>
-                      <span className={styles.inputFileText} type='text'>{ videoFileName }</span>
+                      <span className={styles.inputFileText} type='text'>{ videoName }</span>
                       <Field
                         type='file'
                         name='video'
                         autoComplete='new-password'
                         accept='.mp4'
                         className={styles.videoInput}
-                        onChange={(e) => { handleVideofileChange(e); handleChange(e)}}
-                        onBlur={handleBlur}
                         values={values.video}
+                        onChange={(e) => { handleVideofileChange(e); handleChange(e) }}
                       />
                       <span className={styles.inputFileBtn}>Выберите файл</span>
                     </label>
                     <p className={styles.fileinputHeading}>Выберите обложку:</p>
                     { touched.preview && errors.preview ? (<div className={styles.errors}>{errors.preview}</div>) : null }
                     <label className={styles.inputFile}>
-                      <span className={styles.inputFileText} type='text'>{ previewFileName }</span>
+                      <span className={styles.inputFileText} type='text'>{ previewName }</span>
                       <Field
                         type='file'
                         name='preview'
@@ -137,8 +145,8 @@ export default function CreateVideo() {
                         accept='.png, .jpg, .jpeg'
                         className={styles.previewInput}
                         onChange={ (e) => { handlePreviewChange(e); handleChange(e) }}
-                        onBlur={handleBlur}
                         values={values.preview}
+                        onBlur={handleBlur}
                       />
                       <span className={styles.inputFileBtn}>Выберите файл</span>
                     </label>
