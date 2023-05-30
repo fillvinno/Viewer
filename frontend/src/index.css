@@ -14,6 +14,7 @@
     --grey4: #D6D6D8;
     --grey5: #E8E7E9;
     --red: #CB1F34;
+    --green: #1FCB4F;
 }
 ::selection {
   background: var(--purple1);

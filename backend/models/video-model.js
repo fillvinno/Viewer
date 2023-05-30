@@ -6,10 +6,10 @@ class Video extends Model {}
 
 Video.init({
     id: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-        allowNull: false,
-        autoIncrement: true
+        allowNull: false
     },
     title: {
         type: DataTypes.STRING,
@@ -25,6 +25,7 @@ Video.init({
     },
     views: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
         allowNull: false
     },
     likes: {
