@@ -1,0 +1,11 @@
+.wrap {
+    width: 100%;
+    border-radius: 6px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    transition: .2s;
+    cursor: pointer;
+}
+.wrap:hover {
+    background-color: var(--grey5);
+}

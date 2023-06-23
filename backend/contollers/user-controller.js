@@ -71,6 +71,26 @@ class UserController {
             next(e)
         }
     }
+
+    async sendDeleteMessage(req, res, next) {
+        try {
+            const {userId, channelId} = req.body
+            const mail = await userService.sendDeleteMessage(userId, channelId)
+            return res.json(mail)
+        } catch (e) {
+            next(e)
+        }
+    }
+
+    async deleteUser(req, res, next) {
+        try {
+            const {userId, channelId} = req.params
+            const deletedUser = await userService.deleteUser(userId, channelId)
+            return res.json(deletedUser)
+        } catch (e) {
+            next(e)
+        }
+    }
 }
 
 export default new UserController()

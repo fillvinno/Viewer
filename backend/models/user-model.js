@@ -20,7 +20,7 @@ User.init({
     allowNull: false
   }, 
   password: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(510),
     allowNull: false
   },
   isActivated: {

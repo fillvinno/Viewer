@@ -1,0 +1,54 @@
+.wrap {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.wrap.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modalWrap {
+    padding: 24px;
+    overflow-y: auto;
+    border-radius: 12px;
+    background-color: #fff;
+    transform: scale(0.5);
+    transition: .4s all;
+    width: 600px;
+    height: 450px;
+}
+.modalWrap::-webkit-scrollbar {
+    width: 0;
+}
+
+.modalWrap.active {
+    transform: scale(1);
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+.modalCloseBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+}

@@ -1,0 +1,21 @@
+.heading {
+    border-left: 4px solid var(--purple1);
+    padding-left: 16px;
+    text-transform: uppercase;
+    margin: 16px 0;
+}
+
+.deleteAccountBtn {
+    background-color: var(--purple1);
+    color: #fff;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s;
+}
+.deleteAccountBtn:hover {
+    transition: .2s;
+    background-color: var(--purple2);
+}

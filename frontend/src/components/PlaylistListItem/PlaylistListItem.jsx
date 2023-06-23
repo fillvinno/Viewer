@@ -1,21 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './PlaylistListItem.module.css'
-import preview from '../../img/preview.png'
 
-export default function PlaylistListItem() {
+export default function PlaylistListItem({playlist}) {
   return (
     <div className={styles.playlistWrap}>
-      <Link to='/playlist'>
+      <Link to={`/playlist/${playlist?.id}`}>
         <div className={styles.viewWrapper}>
-          <img src={preview} alt="playlist" className={styles.preview}/>
+          <img src={`http://localhost:5000/${playlist?.previewPath}`} alt="playlist" className={styles.preview}/>
           <div className={styles.blackOverlay}>
-            <span>32</span>
+            <span>{playlist?.videosId?.length}</span>
             <span className='icon-saved'></span>
           </div>
           <div className={styles.playlistOverlay}></div>
         </div>
-        <p className={styles.playlistName}>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p className={styles.playlistName}>{playlist?.title}</p>
       </Link>
     </div>
   )

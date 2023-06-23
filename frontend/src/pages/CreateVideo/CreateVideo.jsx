@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from './CreateVideo.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import arrow from '../../img/menuArrow.svg'
 import User from '../../components/User/User'
 import { Formik, Form, Field } from 'formik'
 import VideoService from '../../services/VideoService'
 import jwt_decode from 'jwt-decode'
+import { useSelector } from 'react-redux'
 
 const validate = values => {
   const errors = {}
@@ -34,6 +35,8 @@ export default function CreateVideo() {
   const [previewFile, setPreviewFile] = useState()
   const [isDownloaded, setDownloaded] = useState(false)
 
+  const user = useSelector(state => state.auth.user)
+
   const formData = new FormData()
 
   const handleVideofileChange = (e) => {
@@ -48,6 +51,7 @@ export default function CreateVideo() {
     setPreviewName(file.name)
   }
 
+  const navigate = useNavigate()
   return (
     <div className={styles.wrap}>
         <header className={styles.header}>
@@ -58,7 +62,7 @@ export default function CreateVideo() {
             </Link>
           </div>
           <div className={styles.rightsideHeader}>
-            <User/>
+            <User user={user}/>
           </div>
         </header>
         <main className={styles.content}>
@@ -74,20 +78,20 @@ export default function CreateVideo() {
                 try {
                   formData.delete('title')
                   formData.delete('description')
-                  
-                  const atPayload = jwt_decode(localStorage.getItem('token'))
 
                   formData.append('title', values.title)
                   formData.append('description', values.description)
                   formData.append('video', videoFile)
                   formData.append('preview', previewFile)
-                  formData.append('channelId', atPayload?.channelId)
+                  formData.append('channelId', user?.channelId)
 
                   const response = VideoService.createVideo(formData)
 
                   if (response) {
                     setDownloaded(true)
                   }
+
+                  navigate('/home')
                 } catch (e) {
                   console.log(e?.response?.data?.message)
                 }  

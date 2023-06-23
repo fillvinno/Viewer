@@ -20,3 +20,7 @@
 .statisticsItem {
     border-bottom: 1px solid var(--black3);
 }
+
+.descriptionWrap {
+    width: 200%;
+}

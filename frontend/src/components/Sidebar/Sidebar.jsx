@@ -3,30 +3,29 @@ import styles from './Sidebar.module.css'
 import Menu from '../Menu/Menu'
 import Logo from '../Logo/Logo'
 
-const menu = [
-  {title: 'Home', icon: 'icon-home', link: '/home'}, 
-  {title: 'Trending', icon: 'icon-trending', link: '/trending'},
-  {title: 'Following', icon: 'icon-following', link: '/following'}
-]
+export default function Sidebar({user}) {
+  const menu = [
+    {title: 'Главная', icon: 'icon-home', link: '/home'}, 
+    {title: 'Популярное', icon: 'icon-trending', link: '/home#trending'},
+    // {title: 'Подписки', icon: 'icon-following', link: `/channel/${user?.channelId}/channels`}
+  ]
+  
+  const library = [
+    // {title: 'Понравившееся', icon: 'icon-favourites', link: '/favourites'},
+    {title: 'Плейлисты', icon: 'icon-saved', link: `/channel/${user?.channelId}/playlists`},
+    {title: 'Ваши видео', icon: 'icon-yourvideos', link: `/channel/${user?.channelId}/featured`},
+  ]
+  
+  const following = [
+  
+  ]
 
-const library = [
-  {title: 'Recent', icon: 'icon-recent', link: '/recent' }, 
-  {title: 'Favourites', icon: 'icon-favourites', link: '/favourites'},
-  {title: 'Saved', icon: 'icon-saved', link: '/saved'},
-  {title: 'Your videos', icon: 'icon-yourvideos', link: '/yourvideos'},
-]
-
-const following = [
-
-]
-
-export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
         <Logo/>
-        <Menu title='menu' list={menu}/>
-        <Menu title='library' list={library}/>
-        <Menu title='following' list={following}/>
+        <Menu title='меню' list={menu}/>
+        <Menu title='библиотека' list={library}/>
+        {/* <Menu title='подписки' list={following}/> */}
     </div>
   )
 }

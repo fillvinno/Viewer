@@ -9,10 +9,10 @@ class Channel extends Model {}
 
 Channel.init({
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,

@@ -50,3 +50,22 @@
     background-color: var(--purple2);
     transition: .1s;
 }
+.followBtnSubscribed {
+    color: var(--purple1);
+    background-color: var(--purple5);
+    color: var(--purple1);
+    transition: .3s;
+}
+.followBtnSubscribed:hover {
+    background-color: #e3dcea;
+    transition: .3s;
+}
+.followbtnUnsubscribed {
+    background-color: var(--purple1);
+    color: white;
+    transition: .3s;
+}
+.followbtnUnsubscribed:hover {
+    background-color: var(--purple2);
+    transition: .3s;
+}

@@ -6,8 +6,8 @@ class Video extends Model {}
 
 Video.init({
     id: {
-        type: DataTypes.INTEGER,
-        autoIncrement: true,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false
     },
@@ -16,7 +16,7 @@ Video.init({
         allowNull: false
     },
     description: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(2048),
         allowNull: false
     },
     channelName: {
@@ -28,7 +28,7 @@ Video.init({
         defaultValue: 0,
         allowNull: false
     },
-    likes: {
+    likesCounter: {
         type: DataTypes.INTEGER,
         defaultValue: 0,
         allowNull: false
@@ -42,7 +42,7 @@ Video.init({
         allowNull: false
     },
     channelId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false
     }
 }, {

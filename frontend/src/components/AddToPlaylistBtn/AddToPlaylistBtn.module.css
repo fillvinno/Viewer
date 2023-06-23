@@ -1,0 +1,14 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 15px;
+    transition: .4s;
+    box-shadow: 8px 20px 56px 13px rgba(34, 60, 80, 0.2);
+}
+
+.wrap:hover {
+    transform: scale(1.03);
+    transition: .4s;
+}

@@ -32,6 +32,22 @@ class MailService {
             `
         })
     }
+
+    async sendDeleteMail(to, link) {
+        await this.transporter.sendMail({
+            from: process.env.SMTP_USER,
+            to,
+            subject: 'Удаление аккаунта на'+ process.env.API_URL,
+            text: '',
+            html:  
+            `
+                <div>
+                    <h1>Для удаления перейдите по ссылке</h1>
+                    <a href="${link}">${link}</a>
+                </div>
+            `
+        })
+    }
 }
 
 export default new MailService()

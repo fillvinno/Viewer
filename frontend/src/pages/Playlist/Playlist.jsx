@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Playlist.module.css'
 import { Link } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
@@ -7,16 +7,38 @@ import playIcon from '../../img/videoplayer/play.svg'
 import shareIcon from '../../img/share.svg'
 import dotsIcon from '../../img/3dotsIcon.svg'
 import PlaylistVideocards from '../../components/PlaylistVideocards/PlaylistVideocards'
+import { useParams } from 'react-router-dom'
+import PlaylistService from '../../services/PlaylistService'
 
 export default function Playlist() {
-  return (
+    let params = useParams()
+    const [playlist, setPlaylist] = useState()
+    const [videos, setVideos] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            const playlist = await PlaylistService.getPlaylistById(params.id)
+            setPlaylist(playlist?.data)
+          }
+          fetchData()
+    }, [params?.id])
+
+    useEffect(() => {
+        async function fetchData() {
+            const videosArray = await PlaylistService.getVideosFromPlaylist(playlist?.videosId)
+            setVideos(videosArray?.data)
+          }
+          fetchData()
+    }, [playlist?.videosId])
+
+    return (
     <Layout>
         <div className={styles.wrap}>
             <div className={styles.firstVideoSection}>
                 <div className={styles.firstVideoSectionWrap}> 
-                    <Link to='/video:1' className={styles.firstVideoLink}>
+                    <Link to={`/video/${videos[0]?.id}`} className={styles.firstVideoLink}>
                         <div className={styles.previewWrap}>
-                            <img src={preview} alt="preview" className={styles.preview}/>
+                            <img src={`http://localhost:5000/${playlist?.previewPath}`} alt="preview" className={styles.preview}/>
                             <div className={styles.previewOverlay}>
                                 <img src={playIcon} alt='play' className={styles.playIcon} />
                                 Воспроизвести
@@ -24,10 +46,10 @@ export default function Playlist() {
                         </div>
                     </Link>
                     <div className={styles.playlistInfoWrap}>
-                        <p className={styles.firstVideoHeading}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum a vitae incidunt reprehenderit laboriosam! Sit optio quaerat dicta reprehenderit, est, officia cum dolorem eos nam esse repellat cumque saepe voluptatem.</p>
-                        <Link to='/channel' className={styles.channelName}>Lorem</Link>
-                        <p className={styles.videoCount}>23 видео</p>
-                        <Link to='/video:1' className={styles.playBtn}>
+                        <p className={styles.firstVideoHeading}>{ playlist && playlist?.title }</p>
+                        <Link to={`/channel/${playlist?.channelId}`} className={styles.channelName}>{ playlist && playlist?.channelName }</Link>
+                        <p className={styles.videoCount}>{ playlist && playlist?.videosId?.length} видео</p>
+                        <Link to={`/video/${playlist?.videosId[0]}`} className={styles.playBtn}>
                             <img src={playIcon} alt='play' className={styles.playIcon} />
                             Воспроизвести
                         </Link>
@@ -43,16 +65,13 @@ export default function Playlist() {
                             </button>
                         </div>
                         <p className={styles.description}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Nihil earum natus unde. Saepe incidunt dolores porro dolor 
-                            ratione voluptatibus. Rem doloribus totam saepe perspiciatis 
-                            obcaecati provident nemo corporis velit? Deserunt?
+                            { playlist && playlist?.description }
                         </p>
                     </div>
                 </div>
             </div>
             <div className={styles.videoList}>
-                <PlaylistVideocards/>
+                <PlaylistVideocards videos={videos}/>
             </div>
         </div>
     </Layout>

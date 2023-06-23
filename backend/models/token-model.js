@@ -12,7 +12,7 @@ Token.init({
         autoIncrement: true
     },
     refreshToken: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(510),
         allowNull: false
     },
     userId: {

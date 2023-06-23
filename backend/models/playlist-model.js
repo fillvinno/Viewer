@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes, Model } from "sequelize"
+import { Sequelize, DataTypes, Model, ARRAY } from "sequelize"
 
 const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
@@ -6,10 +6,10 @@ class Playlist extends Model {}
 
 Playlist.init({
     id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
         allowNull: false,
-        autoIncrement: true
     },
     title: {
         type: DataTypes.STRING,
@@ -19,12 +19,21 @@ Playlist.init({
         type: DataTypes.STRING,
         allowNull: false
     },
+    videosId: {
+        type: DataTypes.ARRAY(DataTypes.STRING(510)),
+        defaultValue: [],
+        allowNull: false,
+    },
+    previewPath: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     channelName: {
         type: DataTypes.STRING,
         allowNull: false
     },
     channelId: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
         allowNull: false
     }
 }, {

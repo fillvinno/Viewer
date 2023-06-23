@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Player.module.css'
-import video from '../../videos/video.mp4'
+import videoo from '../../videos/video.mp4'
 import poster from '../../img/preview.png'
 import { useRef, useState, useEffect } from 'react'
 import backward5 from '../../img/videoplayer/backward-5.svg'
@@ -17,9 +17,10 @@ import exitFullscreenIcon from '../../img/videoplayer/exitFullscreen.svg'
 import VideoCards from '../../components/VideoCards/VideoCards'
 import useOnClickOutside from '../../hooks/useOnClickOutside'
 import PlayerDescription from '../PlayerDescription/PlayerDescription'
+import VideoService from '../../services/VideoService'
+// import { useParams } from 'react-router-dom'
 
-export default function Videoplayer() {
-
+export default function Videoplayer({video}) {
   const videoRef = useRef(null)
   const selectRef = useRef(null)
   const timeRef = useRef(null)
@@ -35,7 +36,17 @@ export default function Videoplayer() {
   const [isMuted, setIsMuted] = useState(false)
   const [videoVolume, setVideoVolume] = useState(localStorage.getItem('video-volume') || 100)
   const [fullscreen, setFullscreen] = useState(false)
-
+  const [videos, setVideos] = useState([])
+ 
+  // получение видео с сервера
+  useEffect(() => {
+    async function fetchData() {
+      const videos = await VideoService.getAmountVideos(18)
+      setVideos(videos)
+    }
+    fetchData()
+  }, [])
+// пауза/воспроизведение видео
   const videoHandler = (control) => {
     if (control === 'play') {
       videoRef.current.play()
@@ -171,10 +182,9 @@ export default function Videoplayer() {
     <div className={styles.pageWrap}>
       <div className={styles.upsidePlayer}>
         <div className={fullscreen ? styles.fullscreenWrap : styles.videoWrap} ref={videoWrapRef}>
-          <video id='video1' ref={videoRef} onClick={handleClick} poster={poster} className={fullscreen ? styles.fullscreenPlayer : styles.player}>
-            <source src={video} />
+          <video id='video1' ref={videoRef} onClick={handleClick} poster={`http://localhost:5000/${video?.previewPath}`} src={`http://localhost:5000/${video?.videoPath}`} className={fullscreen ? styles.fullscreenPlayer : styles.player}>
+            {/* {video && <source src={videoPath} />} */}
           </video>
-          
           <div className={fullscreen ? styles.fullscreenControlsContainer : styles.controlsContainer}>
             <div className={hideControls ? styles.hideControls : styles.controls}>
               <img src={backward5} onClick={moveBackward} alt="" className={styles.controlsIcon} />
@@ -242,10 +252,10 @@ export default function Videoplayer() {
             </div>
           </div>
         </div>
-        <PlayerDescription/> 
+        <PlayerDescription videoInfo={video}/> 
       </div>
         
-    <VideoCards title={'Related videos'}/>
+    <VideoCards title={'Рекомендованные'} videos={videos.data}/>
     
     </div>
   )

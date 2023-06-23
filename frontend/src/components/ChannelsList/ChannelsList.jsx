@@ -2,15 +2,14 @@ import React from 'react'
 import styles from './ChannelsList.module.css'
 import ChannelsListItem from '../ChannelsListItem/ChannelsListItem'
 
-export default function ChannelsList() {
+export default function ChannelsList({channels}) {
   return (
     <div className={styles.wrap}>
-        <ChannelsListItem/>
-        <ChannelsListItem/>
-        <ChannelsListItem/>
-        <ChannelsListItem/>
-        <ChannelsListItem/>
-        <ChannelsListItem/>
+        {
+          channels.map(channel => (
+            <ChannelsListItem key={channel.id} channel={channel}/>
+          ))
+        }
     </div>
   )
 }

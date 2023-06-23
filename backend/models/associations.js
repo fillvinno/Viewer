@@ -3,6 +3,9 @@ import Playlist from "./playlist-model.js"
 import Token from "./token-model.js"
 import User from "./user-model.js"
 import Video from "./video-model.js"
+import Like from "./like-model.js"
+import Subscribe from "./subscribe-model.js"
+import Comment from "./comment-model.js"
 
 User.hasOne(Token, {
     foreignKey: 'userId'
@@ -24,6 +27,26 @@ Channel.hasMany(Playlist, {
 })
 Playlist.belongsTo(Channel)
 
+Video.hasMany(Like, {
+    foreignKey: 'id'
+})
+Like.belongsTo(Video)
+
+// Like.hasMany(Channel, {
+//     foreignKey: 'id'
+// })
+// Channel.belongsTo(Like)
+
+Channel.hasMany(Subscribe, {
+    foreignKey: 'subscriberId'
+})
+Subscribe.belongsTo(Channel)
+
+Video.hasMany(Comment, {
+    foreignKey: 'videoId'
+})
+Comment.belongsTo(Video)
+
 await User.sync({ alter: true })
 console.log('Таблица для модели User была (пере)создана!')
 
@@ -39,4 +62,13 @@ console.log('Таблица для модели Playlist была (пере)со
 await Video.sync({ alter: true })
 console.log('Таблица для модели Video была (пере)создана!')
 
-export { Channel, Playlist, Token, User, Video }
+await Like.sync({ alter: true })
+console.log('Таблица для модели Like была (пере)создана!')
+
+await Subscribe.sync({ alter: true })
+console.log('Таблица для модели Subscribe была (пере)создана!')
+
+await Comment.sync({ alter: true })
+console.log('Таблица для модели Comment была (пере)создана!')
+
+export { Channel, Playlist, Token, User, Video, Like, Subscribe, Comment }

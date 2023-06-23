@@ -1,0 +1,28 @@
+.wrap {
+    width: 800px;
+    transition: .2s;
+    border-radius: 4px;
+    padding: 12px;
+}
+.wrap:hover {
+    background-color: #F5F5F5;
+    transition: .2s;
+}
+.avatar {
+    width: 42px;
+    height: 42px;
+}
+
+.commentInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--black1);
+    margin-bottom: 12px;
+}
+
+.comment {
+    color: var(--black1);
+    padding-left: 54px;
+}

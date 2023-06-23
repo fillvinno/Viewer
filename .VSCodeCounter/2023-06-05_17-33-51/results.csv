@@ -1,0 +1,133 @@
+"filename", "language", "JSON", "Markdown", "JavaScript", "HTML", "CSS", "JavaScript JSX", "XML", "comment", "blank", "total"
+"c:\Users\narihani\Desktop\video-hosting\backend\contollers\channel-controller.js", "JavaScript", 0, 0, 13, 0, 0, 0, 0, 0, 3, 16
+"c:\Users\narihani\Desktop\video-hosting\backend\contollers\user-controller.js", "JavaScript", 0, 0, 67, 0, 0, 0, 0, 0, 9, 76
+"c:\Users\narihani\Desktop\video-hosting\backend\contollers\video-controller.js", "JavaScript", 0, 0, 50, 0, 0, 0, 0, 1, 7, 58
+"c:\Users\narihani\Desktop\video-hosting\backend\db.js", "JavaScript", 0, 0, 19, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\narihani\Desktop\video-hosting\backend\dtos\user-dto.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\narihani\Desktop\video-hosting\backend\exceptions\api-error.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 0, 3, 18
+"c:\Users\narihani\Desktop\video-hosting\backend\index.js", "JavaScript", 0, 0, 24, 0, 0, 0, 0, 1, 5, 30
+"c:\Users\narihani\Desktop\video-hosting\backend\middlewares\auth-middleware.js", "JavaScript", 0, 0, 22, 0, 0, 0, 0, 1, 4, 27
+"c:\Users\narihani\Desktop\video-hosting\backend\middlewares\error-middleware.js", "JavaScript", 0, 0, 8, 0, 0, 0, 0, 0, 1, 9
+"c:\Users\narihani\Desktop\video-hosting\backend\middlewares\file-middleware.js", "JavaScript", 0, 0, 18, 0, 0, 0, 0, 0, 4, 22
+"c:\Users\narihani\Desktop\video-hosting\backend\models\associations.js", "JavaScript", 0, 0, 32, 0, 0, 0, 0, 0, 10, 42
+"c:\Users\narihani\Desktop\video-hosting\backend\models\channel-model.js", "JavaScript", 0, 0, 52, 0, 0, 0, 0, 0, 5, 57
+"c:\Users\narihani\Desktop\video-hosting\backend\models\playlist-model.js", "JavaScript", 0, 0, 33, 0, 0, 0, 0, 0, 4, 37
+"c:\Users\narihani\Desktop\video-hosting\backend\models\token-model.js", "JavaScript", 0, 0, 25, 0, 0, 0, 0, 0, 4, 29
+"c:\Users\narihani\Desktop\video-hosting\backend\models\user-model.js", "JavaScript", 0, 0, 38, 0, 0, 0, 0, 0, 4, 42
+"c:\Users\narihani\Desktop\video-hosting\backend\models\video-model.js", "JavaScript", 0, 0, 51, 0, 0, 0, 0, 0, 4, 55
+"c:\Users\narihani\Desktop\video-hosting\backend\package-lock.json", "JSON", 3780, 0, 0, 0, 0, 0, 0, 0, 1, 3781
+"c:\Users\narihani\Desktop\video-hosting\backend\package.json", "JSON", 35, 0, 0, 0, 0, 0, 0, 0, 1, 36
+"c:\Users\narihani\Desktop\video-hosting\backend\router\index.js", "JavaScript", 0, 0, 23, 0, 0, 0, 0, 0, 3, 26
+"c:\Users\narihani\Desktop\video-hosting\backend\services\channel-service.js", "JavaScript", 0, 0, 27, 0, 0, 0, 0, 0, 5, 32
+"c:\Users\narihani\Desktop\video-hosting\backend\services\mail-service.js", "JavaScript", 0, 0, 32, 0, 0, 0, 0, 0, 5, 37
+"c:\Users\narihani\Desktop\video-hosting\backend\services\token-service.js", "JavaScript", 0, 0, 48, 0, 0, 0, 0, 0, 7, 55
+"c:\Users\narihani\Desktop\video-hosting\backend\services\user-service.js", "JavaScript", 0, 0, 92, 0, 0, 0, 0, 5, 22, 119
+"c:\Users\narihani\Desktop\video-hosting\backend\services\video-service.js", "JavaScript", 0, 0, 53, 0, 0, 0, 0, 4, 16, 73
+"c:\Users\narihani\Desktop\video-hosting\frontend\README.md", "Markdown", 0, 38, 0, 0, 0, 0, 0, 0, 33, 71
+"c:\Users\narihani\Desktop\video-hosting\frontend\package-lock.json", "JSON", 29135, 0, 0, 0, 0, 0, 0, 0, 1, 29136
+"c:\Users\narihani\Desktop\video-hosting\frontend\package.json", "JSON", 46, 0, 0, 0, 0, 0, 0, 0, 1, 47
+"c:\Users\narihani\Desktop\video-hosting\frontend\public\index.html", "HTML", 0, 0, 0, 13, 0, 0, 0, 1, 3, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\App.js", "JavaScript", 0, 0, 57, 0, 0, 0, 0, 2, 6, 65
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\AddVideoBtn\AddVideoBtn.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 12, 0, 0, 3, 15
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\AddVideoBtn\AddVideoBtn.module.css", "CSS", 0, 0, 0, 0, 25, 0, 0, 0, 1, 26
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelLayout\ChannelLayout.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 51, 0, 0, 3, 54
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelLayout\ChannelLayout.module.css", "CSS", 0, 0, 0, 0, 53, 0, 0, 0, 9, 62
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelsListItem\ChannelsListItem.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 18, 0, 0, 2, 20
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelsListItem\ChannelsListItem.module.css", "CSS", 0, 0, 0, 0, 47, 0, 0, 0, 5, 52
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelsList\ChannelsList.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 2, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\ChannelsList\ChannelsList.module.css", "CSS", 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Header\Header.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 19, 0, 0, 1, 20
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Header\Header.module.css", "CSS", 0, 0, 0, 0, 21, 0, 0, 0, 1, 22
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Layout\Layout.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 18, 0, 0, 3, 21
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Layout\Layout.module.css", "CSS", 0, 0, 0, 0, 20, 0, 0, 0, 3, 23
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Logo\Logo.css", "CSS", 0, 0, 0, 0, 12, 0, 0, 0, 0, 12
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Logo\Logo.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 12, 0, 0, 2, 14
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\MenuItem\MenuItem.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 11, 0, 0, 2, 13
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\MenuItem\MenuItem.module.css", "CSS", 0, 0, 0, 0, 23, 0, 0, 0, 2, 25
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Menu\Menu.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 2, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Menu\Menu.module.css", "CSS", 0, 0, 0, 0, 7, 0, 0, 0, 0, 7
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Notifications\Notifications.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 2, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Notifications\Notifications.module.css", "CSS", 0, 0, 0, 0, 36, 0, 0, 0, 2, 38
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlayerDescription\PlayerDescription.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 41, 0, 1, 2, 44
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlayerDescription\PlayerDescription.module.css", "CSS", 0, 0, 0, 0, 89, 0, 0, 0, 10, 99
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Player\Player.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 227, 0, 5, 30, 262
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Player\Player.module.css", "CSS", 0, 0, 0, 0, 212, 0, 0, 2, 24, 238
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistListItem\PlaylistListItem.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 21, 0, 0, 2, 23
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistListItem\PlaylistListItem.module.css", "CSS", 0, 0, 0, 0, 52, 0, 0, 0, 4, 56
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistVideocardsItem\PlaylistVideocardsItem.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 21, 0, 0, 1, 22
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistVideocardsItem\PlaylistVideocardsItem.module.css", "CSS", 0, 0, 0, 0, 44, 0, 0, 0, 6, 50
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistVideocards\PlaylistVideocards.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 2, 15
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistVideocards\PlaylistVideocards.module.css", "CSS", 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistsList\PlaylistsList.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 0, 1, 16
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\PlaylistsList\PlaylistsList.module.css", "CSS", 0, 0, 0, 0, 5, 0, 0, 0, 0, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\SearchBar\SearchBar.css", "CSS", 0, 0, 0, 0, 30, 0, 0, 0, 2, 32
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\SearchBar\SearchBar.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 13, 0, 0, 2, 15
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Sidebar\Sidebar.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 27, 0, 0, 6, 33
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\Sidebar\Sidebar.module.css", "CSS", 0, 0, 0, 0, 7, 0, 0, 0, 0, 7
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\User\User.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 9, 0, 6, 2, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\User\User.module.css", "CSS", 0, 0, 0, 0, 22, 0, 0, 0, 3, 25
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\VideoCard\VideoCard.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 24, 0, 1, 3, 28
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\VideoCard\VideoCard.module.css", "CSS", 0, 0, 0, 0, 47, 0, 0, 0, 4, 51
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\VideoCards\VideoCards.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 15, 0, 12, 2, 29
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\components\VideoCards\VideoCards.module.css", "CSS", 0, 0, 0, 0, 25, 0, 0, 0, 2, 27
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\fonts\icomoon.svg", "XML", 0, 0, 0, 0, 0, 0, 26, 0, 0, 26
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\hooks\useOnClickOutside.js", "JavaScript", 0, 0, 20, 0, 0, 0, 0, 7, 0, 27
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\http\index.js", "JavaScript", 0, 0, 28, 0, 0, 0, 0, 0, 5, 33
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\3dotsIcon.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\addVideoBtn.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\comments.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\favourites.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\following.svg", "XML", 0, 0, 0, 0, 0, 0, 7, 0, 1, 8
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\home.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\like.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\logo.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\menuArrow.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\notice.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\recent.svg", "XML", 0, 0, 0, 0, 0, 0, 7, 0, 1, 8
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\saved.svg", "XML", 0, 0, 0, 0, 0, 0, 7, 0, 1, 8
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\searchIcon.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\settings-icon.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\share.svg", "XML", 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\trending.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\backward-5.svg", "XML", 0, 0, 0, 0, 0, 0, 10, 0, 1, 11
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\exitFullscreen.svg", "XML", 0, 0, 0, 0, 0, 0, 13, 0, 1, 14
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\forward-5.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\fullscreen.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\muted.svg", "XML", 0, 0, 0, 0, 0, 0, 5, 0, 1, 6
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\next.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\pause.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\play.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\previous.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\setting.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\videoplayer\volume.svg", "XML", 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\img\yourvideos.svg", "XML", 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\index.css", "CSS", 0, 0, 0, 0, 106, 0, 0, 2, 6, 114
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\index.js", "JavaScript", 0, 0, 12, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelAbout\ChannelAbout.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 35, 0, 0, 3, 38
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelAbout\ChannelAbout.module.css", "CSS", 0, 0, 0, 0, 18, 0, 0, 0, 5, 23
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelChannels\ChannelChannels.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 14, 0, 0, 2, 16
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelChannels\ChannelChannels.module.css", "CSS", 0, 0, 0, 0, 9, 0, 0, 0, 1, 10
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelFeatured\ChannelFeatured.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 34, 0, 2, 3, 39
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelFeatured\ChannelFeatured.module.css", "CSS", 0, 0, 0, 0, 3, 0, 0, 0, 0, 3
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelPlaylists\ChannelPlaylists.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 16, 0, 0, 2, 18
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Channel\ChannelPlaylists\ChannelPlaylists.module.css", "CSS", 0, 0, 0, 0, 9, 0, 0, 0, 1, 10
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\CreateVideo\CreateVideo.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 157, 0, 0, 14, 171
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\CreateVideo\CreateVideo.module.css", "CSS", 0, 0, 0, 0, 186, 0, 0, 4, 17, 207
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Home\Home.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 21, 0, 0, 5, 26
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Login\Login.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 86, 0, 1, 8, 95
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Login\Login.module.css", "CSS", 0, 0, 0, 0, 79, 0, 0, 3, 7, 89
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Playlist\Playlist.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 59, 0, 0, 2, 61
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Playlist\Playlist.module.css", "CSS", 0, 0, 0, 0, 125, 0, 0, 1, 14, 140
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Registration\Registration.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 128, 0, 1, 8, 137
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\Registration\Registration.module.css", "CSS", 0, 0, 0, 0, 82, 0, 0, 4, 7, 93
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\VideoPlayer\VideoPlayer.jsx", "JavaScript JSX", 0, 0, 0, 0, 0, 22, 0, 7, 5, 34
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\pages\VideoPlayer\VideoPlayer.module.css", "CSS", 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\services\AuthService.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 1, 1, 17
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\services\ChannelService.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\services\UserService.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\services\VideoService.js", "JavaScript", 0, 0, 19, 0, 0, 0, 0, 0, 1, 20
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\store\slices\authSlice.js", "JavaScript", 0, 0, 19, 0, 0, 0, 0, 3, 4, 26
+"c:\Users\narihani\Desktop\video-hosting\frontend\src\store\store.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 0, 2, 11
+"c:\Users\narihani\Desktop\video-hosting\package-lock.json", "JSON", 6, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\Users\narihani\Desktop\video-hosting\package.json", "JSON", 1, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"Total", "-", 33003, 38, 948, 13, 1404, 1184, 143, 78, 483, 37294

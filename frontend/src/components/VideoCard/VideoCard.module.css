@@ -6,11 +6,20 @@
 .videoCardWrap p {
     margin: 0;
 }
+.channelVideoCardWrap .preview{
+    height: 150px;
+}
+.popularWrap .preview {
+    height: 200px;
+}
 
 .preview {
     width: 100%;
+    background-color: #000;
     border-radius: 15px;
     margin-bottom: 8px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .infoWrap {

@@ -18,30 +18,9 @@ export const authSlice = createSlice({
         setAuth: (state, action) => {
             state.isAuth = action.payload
         }
-        // logout: async () => {
-        //     try {
-        //         const response = await AuthService.logout() 
-        //         localStorage.removeItem('token')
-        //         setAuth(false)
-        //         setUser({})
-        //     } catch (e) {
-        //         console.log(e.response?.data?.message)
-        //     }
-        // },
-        // checkAuth: async (state, action) => {
-        //     try {
-        //         const response = await axios.get(`${API_URL}/refresh`, {withCredentials: true})
-        //         console.log(response);
-        //         localStorage.setItem('token', response.data.accessToken)
-        //         setAuth(true)
-        //         setUser(response.data.user)
-        //     } catch (e) {
-        //         console.log(e.response?.data?.message)
-        //     }
-        // }
     }
 })
 
-export const {setAuth, setUser, checkAuth} = authSlice.actions 
+export const {setAuth, setUser} = authSlice.actions 
 
 export default authSlice.reducer

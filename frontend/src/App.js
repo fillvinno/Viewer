@@ -15,9 +15,13 @@ import ChannelChannels from './pages/Channel/ChannelChannels/ChannelChannels'
 import ChannelAbout from './pages/Channel/ChannelAbout/ChannelAbout'
 import Playlist from './pages/Playlist/Playlist';
 import CreateVideo from './pages/CreateVideo/CreateVideo';
+import PlaylistCreate from './pages/PlaylistCreate/PlaylistCreate';
+import FindVideo from './pages/FindVideo/FindVideo';
+import { useSelector } from 'react-redux';
+import Settings from './pages/Settings/Settings';
 
 function App() {
-
+  const auth = useSelector(state => state.auth.isAuth)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -38,25 +42,53 @@ function App() {
     }
     fetchData()
   }, [])
-
+  console.log(auth)
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/player' element={<VideoPlayer/>}/>
-        <Route path='/video:id' element={<VideoPlayer/>}/>
-        <Route path='/trending' element={<h1>trending</h1>}/>
-        <Route path='/registration' element={<Registration/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/channel' element={<ChannelFeatured/>}/>
-        <Route path='/channel/featured' element={<ChannelFeatured/>}/>
-        <Route path='/channel/playlists' element={<ChannelPlaylists/>}/>
-        <Route path='/channel/channels' element={<ChannelChannels/>}/>
-        <Route path='/channel/about' element={<ChannelAbout/>}/>
-        <Route path='/playlist' element={<Playlist/>}/>
-        <Route path='/create' element={<CreateVideo/>}/>
-      </Routes>
+      {
+        auth ? 
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/player' element={<VideoPlayer/>}/>
+            <Route path='/video/:id' element={<VideoPlayer/>}/>
+            <Route path='/channel/:id' element={<ChannelFeatured/>}/>
+            <Route path='/channel/:id/featured' element={<ChannelFeatured/>}/>
+            <Route path='/channel/:id/playlists' element={<ChannelPlaylists/>}/>
+            <Route path='/channel/:id/channels' element={<ChannelChannels/>}/>
+            <Route path='/channel/:id/about' element={<ChannelAbout/>}/>
+            <Route path='/playlist/:id' element={<Playlist/>}/>
+            <Route path='/create' element={<CreateVideo/>}/>
+            <Route path='/create-playlist' element={<PlaylistCreate/>}/>
+            <Route path='/find/:title' element={<FindVideo/>}/>
+            <Route path='/settings' element={<Settings/>}/>
+          </Routes>
+        :
+          <Routes>
+            <Route path='/registration' element={<Registration/>}/>
+            <Route path='/login' element={<Login/>}/>
+          </Routes>
+      }
+      {/* {
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/player' element={<VideoPlayer/>}/>
+            <Route path='/video/:id' element={<VideoPlayer/>}/>
+            <Route path='/channel/:id' element={<ChannelFeatured/>}/>
+            <Route path='/channel/:id/featured' element={<ChannelFeatured/>}/>
+            <Route path='/channel/:id/playlists' element={<ChannelPlaylists/>}/>
+            <Route path='/channel/:id/channels' element={<ChannelChannels/>}/>
+            <Route path='/channel/:id/about' element={<ChannelAbout/>}/>
+            <Route path='/playlist/:id' element={<Playlist/>}/>
+            <Route path='/create' element={<CreateVideo/>}/>
+            <Route path='/create-playlist' element={<PlaylistCreate/>}/>
+            <Route path='/find/:title' element={<FindVideo/>}/>
+        
+            <Route path='/registration' element={<Registration/>}/>
+            <Route path='/login' element={<Login/>}/>
+          </Routes>
+      } */}
     </BrowserRouter>
   );
 }

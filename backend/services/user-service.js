@@ -4,7 +4,7 @@ import MailService from './mail-service.js'
 import TokenService from './token-service.js'
 import UserDto from '../dtos/user-dto.js'
 import { Sequelize } from 'sequelize'
-import { User, Channel } from '../models/associations.js'
+import { User, Channel, Video, Playlist ,Subscribe ,Like } from '../models/associations.js'
 import ApiError from '../exceptions/api-error.js'
 import ChannelService from './channel-service.js'
 import channelService from './channel-service.js'
@@ -107,13 +107,21 @@ class UserService {
         return users
     }
 
-    async deleteUser(userId) {
-        const user = User.destroy({ where: { userId } })
-        ChannelService.deleteChannel()
+    async sendDeleteMessage(userId, channelId) {
+        const user = await User.findByPk(userId)
+        const mail = await MailService.sendDeleteMail(user.email, `${process.env.API_URL}/api/delete-user/${userId}/${channelId}`)
+        return 'message sent'
+    }
+
+    async deleteUser(userId, channelId) {
+        const user = await User.destroy({ where: { id: userId } })
+        const channel = await Channel.destroy({ where: { channelId } })
+        const video = await Video.destroy({ where: { channelId } })
+        const playlist = await Playlist.destroy({ where: { channelId } })
+        const comment = await Comment.destroy({ where: { channelId } })
+        const subscribe = await Subscribe.destroy({ where: { channelId } })
+        const like = await Like.destroy({ where: { channelId } })
     }
 }
-
-// const papa = new UserService()
-// papa.registration('papaaafaaфafaaaaaaaaaaаaa', '123', '123', true)
 
 export default new UserService()

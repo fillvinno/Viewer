@@ -1,5 +1,5 @@
 import { Sequelize } from 'sequelize'
-import { Channel } from '../models/associations.js'
+import { Channel, Subscribe } from '../models/associations.js'
 
 const sequelize = new Sequelize(process.env.DB_URL, { logging: false })
 
@@ -18,9 +18,45 @@ class ChannelService {
         channel.name = channelName
         await channel.save()
     }
-    async deleteChannel(userId) {
-        
+    async getChannelById(channelId) {
+        const channel = await Channel.findOne({ where: { id: channelId } })
+        console.log(channel.dataValues)
+        return channel.dataValues
     }
+    async subscribe(channelId, subscriberId) {
+        const subscribe = await Subscribe.create({ channelId, subscriberId })
+        const channel = await Channel.findOne({ where: { id: subscriberId } })
+        channel.followers = channel.followers + 1
+        channel.save()
+        return { subscribe: subscribe.dataValues, channel: channel.dataValues }
+    }
+    async unSubscribe(channelId, subscriberId) {
+        const subscribe = await Subscribe.destroy({ where: { channelId, subscriberId } })
+        const channel = await Channel.findOne({ where: { id: subscriberId } })
+        channel.followers = channel.followers - 1
+        channel.save()
+        return { channel: channel.dataValues }
+    }
+    async isSubscribed(channelId, subscriberId) {
+        const subscribe = await Subscribe.findOne({ where: { channelId, subscriberId } })
+        return subscribe ? true : false
+    }
+    async getSubscribes(channelId) {
+        // получение всех подписок канала
+        const subscribes = await Subscribe.findAll({ where: { channelId } })
+
+        let subscribesArray = []
+        // поиск канала из таблицы с подписками
+        for (const subscribe of subscribes) {
+            let subscribeData = await this.getChannelById(subscribe.subscriberId)
+            subscribesArray.push(subscribeData)
+        }
+
+        return subscribesArray
+    }
+    // async deleteChannel(userId) {
+        
+    // }
 }
 
 export default new ChannelService()

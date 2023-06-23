@@ -1,0 +1,207 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    height: 90px;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 50px;
+}
+
+.leftSideHeader {
+    height: 100%;
+}
+
+.backToApp {
+    padding: 0 20px;
+    height: 100%;
+    text-decoration: none;
+    color: var(--black1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    transition: .2s;
+}
+.backToApp:hover {
+    transition: .2s;
+    transform: scale(1.05);
+}
+
+.formWrap {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    padding: 0 100px;
+    margin-bottom: 80px;
+}
+
+h2 {
+    color: var(--black1);
+}
+
+.leftSideContent {
+    display: flex;
+    flex-direction: column;
+}
+.rightSideContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrowImg {
+    height: 10px;
+    transform: rotate(90deg);
+}
+
+.fileinputHeading {
+    color: var(--black1);
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.titleInput {
+    border: none;
+    outline: 1px solid var(--black4);
+    padding: 12px;
+    border-radius: 4px;
+    width: 300px;
+    margin-bottom: 18px;
+}
+.descriptionTextarea {
+    border: none;
+    outline: 1px solid var(--black4);
+    padding: 12px;
+    border-radius: 4px;
+    width: 300px;
+    height: 150px;
+    resize: none;
+}
+.videoInput {
+    border: none;
+    outline: 1px solid var(--purple1);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.previewInput {
+    border: none;
+    outline: 1px solid var(--purple1);
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.titleInput:hover, .descriptionTextarea:hover {
+    outline: 1px solid var(--purple1);
+}
+.titleInput:focus, .descriptionTextarea:focus {
+    outline: 3px solid var(--purple1);
+}
+.titleInput:hover:not(:focus), .descriptionTextarea:hover:not(:focus) {
+    outline: 1px solid var(--purple1);
+}
+
+.saveBtn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: var(--purple1);
+    color: #fff;
+    border: none;
+    border-radius: 48px;
+    width: 300px;
+    transition: .2s;
+}
+.saveBtn:hover {
+    background-color: var(--purple2);
+    transition: .2s;
+}
+
+.errors {
+    color: var(--red);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.videoDownloaded {
+    margin: 0;
+    font-size: 18px;
+    color: var(--green);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* кнопки загрузки */
+
+.inputFile {
+	position: relative;
+	display: inline-block;
+    margin-bottom: 12px;
+}
+.inputFileText {
+	padding: 0 10px;
+	line-height: 40px;
+	text-align: left;
+	height: 40px;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	width: 200px;
+	border-radius: 6px 0px 0 6px;
+	border: 1px solid #ddd;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.inputFileBtn {
+    position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 0 4px 4px 0;
+	background-color: var(--purple1);
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.inputFile input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+/* Focus */
+.inputFile input[type=file]:focus + .inputFileBtn {
+	box-shadow: 0 0 0 0.2rem var(--purple4);
+}
+ 
+/* Hover/active */
+.inputFile:hover .inputFileBtn {
+	background-color: var(--purple2);
+}
+.inputFile:active .inputFileBtn {
+	background-color: var(--purple3);
+}
+ 
+/* Disabled */
+.inputFile input[type=file]:disabled + .inputFileBtn {
+	background-color: #eee;
+}
