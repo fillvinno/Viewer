@@ -8,6 +8,7 @@
 /backend/uploads
 /.pnp
 .pnp.js
+.VSCodeCounter
 
 # testing
 /coverage
