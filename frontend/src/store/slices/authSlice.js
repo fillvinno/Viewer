@@ -1,7 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import AuthService from "../../services/AuthService";
-// import axios from "axios";
-// import { API_URL } from "../../http";
 
 const initialState = {
     user: {},

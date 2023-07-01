@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './SearchBar.css'
+import styles from './SearchBar.module.css'
 import searchIcon from '../../img/searchIcon.svg'
 import { useNavigate } from 'react-router-dom'
 
@@ -19,11 +19,11 @@ export default function SearchBar() {
     navigate(`/find/${text}`)
   }
   return (
-    <form className="search-bar">    
-        <input className='search-bar__txt' type="text" placeholder='Поиск' name='search' onChange={handleChange} autoComplete='new-password'/>
-        <button className='search-bar__btn' onClick={handleSubmit}>
+    <div className={styles.searchBar}>    
+        <input className={styles.searchInput} type="text" placeholder='Поиск' name='search' onChange={handleChange} autoComplete='new-password'/>
+        <button className={styles.searchBtn} onClick={handleSubmit}>
             <img src={searchIcon} alt="search" />
         </button>
-    </form>
+    </div>
   )
 }
