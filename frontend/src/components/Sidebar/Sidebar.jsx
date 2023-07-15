@@ -17,7 +17,7 @@ export default function Sidebar({user}) {
   ]
   
   const following = [
-  
+    
   ]
 
   return (

@@ -11,7 +11,7 @@ export default function VideoCard({video, type}) {
       <Link to={`/video/${video.id}`}>
         <img className={styles.preview} src={`http://localhost:5000/${video?.previewPath}`} alt="preview" />
       </Link>
-      <Link to={`/channel/${video.channelId}`} className={styles.infoWrap}>
+      <Link to={`/channel/${video.channelId}/featured`} className={styles.infoWrap}>
         <p className={styles.videoName}>{ video?.title }</p>
         <p className={styles.videoInfo}>
           <span className={styles.videoViews}>{ video?.views }  просмотров</span>

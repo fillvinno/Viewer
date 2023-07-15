@@ -4,7 +4,7 @@ import channelService from "../services/channel-service.js"
 class ChannelController {
     async getChannelById(req, res, next) {
         try {
-            const { id } = req.params;
+            const { id } = req.params
             const channel = await channelService.getChannelById(id)
             return res.json(channel)
         } catch (e) {
@@ -15,7 +15,7 @@ class ChannelController {
         try {
             const { channelId, subscriberId } = req.body
             const subscribe = await channelService.subscribe(channelId, subscriberId)
-            return res.json(this.subscribe)
+            return res.json(subscribe)
         } catch (e) {
             next(e)
         }
@@ -24,7 +24,7 @@ class ChannelController {
         try {
             const { channelId, subscriberId } = req.body
             const subscribe = await channelService.unSubscribe(channelId, subscriberId)
-            return res.json(this.subscribe)
+            return res.json(subscribe)
         } catch (e) {
             next(e)
         }

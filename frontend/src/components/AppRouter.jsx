@@ -32,15 +32,8 @@ export const AppRouter = () => {
     return (
         <Routes>
             { auth 
-            ? authRoutes.map(({ path, Component }) => 
-                <Route key={path} path={path} element={Component} exact/>) 
-            : unAuthRoutes.map(({ path, Component }) => 
-                <Route key={path} path={path} element={Component} exact/>)
-            }
-            {/* <Route path="*" element={<Navigate replace to="/login"/>} /> */}
-            { auth
-            ? <Route path='*' element={<Navigate replace to='/'/>}/>
-            : <Route path='*' element={<Navigate replace to='/login'/>}/>
+                ? authRoutes.map(({ path, Component }) => <Route key={path} path={path} element={Component} exact/>) 
+                : unAuthRoutes.map(({ path, Component }) => <Route key={path} path={path} element={Component} exact/>)
             }
         </Routes>
     )

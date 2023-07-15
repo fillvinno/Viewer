@@ -20,7 +20,7 @@ class ChannelService {
     }
     async getChannelById(channelId) {
         const channel = await Channel.findOne({ where: { id: channelId } })
-        console.log(channel.dataValues)
+        console.log('channelById ->', channel.dataValues)
         return channel.dataValues
     }
     async subscribe(channelId, subscriberId) {

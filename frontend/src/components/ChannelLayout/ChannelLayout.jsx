@@ -7,23 +7,11 @@ import { Link, NavLink, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import ChannelService from '../../services/ChannelService'
 
-export default function ChannelLayout({children, channel}) {
+export default function ChannelLayout({children, channel, setIsSubscribed, isSubscribed}) {
     const params = useParams()
     const user = useSelector(state => state.auth.user)
-    const [isSubscribed, setIsSubscribed] = useState()
-
-    useEffect(() => {
-        try {
-          async function fetchData() {
-            const response = await ChannelService.isSubscribed(user?.channelId, params.id)
-            setIsSubscribed(response?.data)
-          }
-          fetchData()
-        } catch (e) {
-          console.log(e)
-        }
-    }, [params.id, channel])
-    console.log('=>',isSubscribed)
+    console.log(isSubscribed)
+    
     const subscribe = async () => {
         try {
             setIsSubscribed(true)
@@ -40,6 +28,7 @@ export default function ChannelLayout({children, channel}) {
             console.log(e?.message)
         }
     }
+
     return (
         <Layout>
             <div className={styles.channelInfoWrapper}>

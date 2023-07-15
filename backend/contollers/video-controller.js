@@ -33,7 +33,6 @@ class VideoController {
 
     async getAmountVideos(req, res, next) {
         try {
-            console.log(req.params)
             const videos = await videoService.getAmountVideos(req.params.amount)
             return res.json(videos)
         } catch (e) {
